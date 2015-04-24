@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script type="text/javascript">
+	function sumar(x,y){
+		r=Number(x)+Number(y);
+		if(x!= "" && y!=""){
+		document.getElementById("res").innerHTML=r; 
+		}else{
+		document.getElementById("res").innerHTML="Completa los campos";
+		}
+
+	}
+	function restar(x,y){
+		r=Number(x)-Number(y);
+		if(x!= "" && y!=""){
+		document.getElementById("res").innerHTML=r; 
+		}else{
+		document.getElementById("res").innerHTML="Completa los campos";
+		}
+	}
+	function multi(x,y){
+		r=Number(x)*Number(y);
+		if(x!= "" && y!=""){
+		document.getElementById("res").innerHTML=r; 
+		}else{
+		document.getElementById("res").innerHTML="Completa los campos";
+		} 
+	}
+	function divi(x,y){
+		r=Number(x)/Number(y);
+		if(x!= "" && y!=""){
+		document.getElementById("res").innerHTML=r; 
+		}else{
+		document.getElementById("res").innerHTML="Completa los campos";
+		}
+	}
+
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1> CALCULADORA BASICA</h1>
+		<input type="text" id="x">
+		<input type="text" id="y">
+			<div class="boxr">
+				<div id="res"></div>
+			</div>
+			
+	</div>
+	<div class="boxbtn">
+				<input type="button" class="btn" value="Sumar" onclick="sumar(document.getElementById('x').value,document.getElementById('y').value)">
+				<input type="button" class="btn" value="Restar"onclick="restar(document.getElementById('x').value,document.getElementById('y').value)">	
+				<input type="button" class="btn" value="Multiplicar" onclick="multi(document.getElementById('x').value,document.getElementById('y').value)">
+				<input type="button" class="btn" value="Dividir" onclick="divi(document.getElementById('x').value,document.getElementById('y').value)">
+	</div>
+
+</body>
+</html>
